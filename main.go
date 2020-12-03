@@ -15,13 +15,13 @@ func SwayRotate(orientation string) (err error) {
 
 	switch orientation {
 	case "normal":
-		degrees = "0"
-	case "right-up":
-		degrees = "90"
-	case "bottom-up":
 		degrees = "180"
-	case "left-up":
+	case "right-up":
 		degrees = "270"
+	case "bottom-up":
+		degrees = "0"
+	case "left-up":
+		degrees = "90"
 	default:
 		return errors.New("Unrecognized orientation: " + orientation)
 	}
